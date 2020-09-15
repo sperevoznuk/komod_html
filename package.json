@@ -1,0 +1,24 @@
+{
+  "name": "komod_html",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-rigger": "^0.5.8"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sperevoznuk/komod_html.git"
+  },
+  "author": "Sergey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sperevoznuk/komod_html/issues"
+  },
+  "homepage": "https://github.com/sperevoznuk/komod_html#readme"
+}
