@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
-    <link rel="stylesheet" href="../css/">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
@@ -29,19 +29,11 @@
                     </ul>
                     <div class="cart">
                         <div class="icon" data-count="10">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z"
-                                    stroke="#2F2C35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path
-                                    d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z"
-                                    stroke="#2F2C35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path
-                                    d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6"
-                                    stroke="#2F2C35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <svg class="img">
+                                <use xlink:href="img/sprite.svg#cart"></use>
                             </svg>
                         </div>
+
                         <div class="text">В корзине 10 товаров</div>
                     </div>
                 </div>
@@ -81,40 +73,42 @@
                     </svg>
 
                 </a>
-            </div>
-            <div class="right">
-                <div class="row-1">
-                    <div class="time">Прием заказов онлайн: <span>Круглосуточно</span></div>
-                    <div class="adresses">
-                        <div class="caption">Ближайший адрес магазина:</div>
-                        <div class="drop-adress">
-                            <div class="rows">ул. Караваевская 23, ТЦ Мебель Дом, 2ой этаж 214-215 секция</div>
-                            <div class="rows">ул. Караваевская 23, ТЦ Мебель Дом, 2ой этаж 214-215 секция</div>
-                            <div class="rows">ул. Караваевская 23, ТЦ Мебель Дом, 2ой этаж 214-215 секция</div>
-                            <div class="rows">ул. Караваевская 23, ТЦ Мебель Дом, 2ой этаж 214-215 секция</div>
-                            <div class="rows">ул. Караваевская 23, ТЦ Мебель Дом, 2ой этаж 214-215 секция</div>
+
+                <div class="right">
+                    <div class="row-1">
+                        <div class="time">Прием заказов онлайн: <span>Круглосуточно</span></div>
+                        <div class="adresses">
+                            <div class="caption">Ближайший адрес магазина:</div>
+                            <div class="drop-adress">
+                                <div class="rows">ул. Караваевская 23, ТЦ Мебель Дом, 2ой этаж 214-215 секция</div>
+                                <div class="rows">ул. Караваевская 23, ТЦ Мебель Дом, 2ой этаж 214-215 секция</div>
+                                <div class="rows">ул. Караваевская 23, ТЦ Мебель Дом, 2ой этаж 214-215 секция</div>
+                                <div class="rows">ул. Караваевская 23, ТЦ Мебель Дом, 2ой этаж 214-215 секция</div>
+                                <div class="rows">ул. Караваевская 23, ТЦ Мебель Дом, 2ой этаж 214-215 секция</div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row-2">
+                        <div class="search">
+                           
+                            <input type="text" name="search">
+                            <button class="search-btn">
+                                <svg>
+                                    <use xlink:href="img/sprite.svg#zoom"></use>
+                                </svg>
+                            </button>
                         </div>
 
-                    </div>
-                </div>
-                <div class="row-2">
-                    <div class="search">
-                        <div class="input" name="search"></div>
-                        <button class="search">
-                            <svg>
+                        <div class="phone-block">
+                            <div class="time">09:00 - 22:00</div>
+                            <a href="tel:88129801875" class="phone">8 (812) 980-18-75</a>
+                        </div>
 
-                            </svg>
-                        </button>
-                    </div>
 
-                    <div class="phone-block">
-                        <div class="time">09:00 - 22:00</div>
-                        <a href="tel:88129801875" class="phone">8 (812) 980-18-75</a>
                     </div>
-
 
                 </div>
-
             </div>
         </div>
 
@@ -252,6 +246,7 @@
 
  
 </foooter>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
 </body>
 

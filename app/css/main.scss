@@ -1,0 +1,28 @@
+@import 'reset';
+@import 'vars';
+
+body {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+    font-family: 'Rubik', sans-serif;
+}
+
+.container {
+    max-width: 1190px;
+    width: 100%;
+    padding: 0 10px;
+}
+
+a {
+    color: $colorSubBlack;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+@import 'header';
