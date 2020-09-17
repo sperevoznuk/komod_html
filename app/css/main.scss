@@ -14,6 +14,7 @@ body {
     max-width: 1190px;
     width: 100%;
     padding: 0 10px;
+    margin: auto;
 }
 
 a {
@@ -26,3 +27,4 @@ a {
 }
 
 @import 'header';
+@import 'breadcrumb';

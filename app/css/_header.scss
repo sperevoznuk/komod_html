@@ -2,11 +2,13 @@ header {
     .top {
         background: #F5F5F9;
         padding: 5px 0;
+        margin-bottom: 20px;
 
         .container {
             display: flex;
             justify-content: space-between;
             margin: auto;
+
         }
 
         .left {
@@ -90,23 +92,40 @@ header {
         }
 
         .right {
+            width: calc(100% - 137px);
+
+
             .row-1 {
-                .time {}
+                .time {
+                    font-size: 12px;
+                    line-height: 16px;
+                    letter-spacing: 0.4px;
+                    color: #2F2C35;
+                }
 
                 .caption {}
 
                 .adresses {
                     display: none;
+
                     .rows {}
                 }
             }
 
-            .row-2 {}
+            .row-2 {
+                display: flex;
+                align-items: center;
+
+            }
+
+            .phone-block {
+                width: 200px;
+            }
 
             .search {
                 display: flex;
                 align-items: center;
-            
+                width: calc(100% - 200px);
 
                 input {
                     border: 1px solid #F5F5F9;
@@ -116,6 +135,34 @@ header {
             }
         }
     }
+
+    .menu {
+        background: #2F2C35;
+
+        nav {
+            ul {
+                display: flex;
+
+                >li {
+                    >a {
+                        color: #fff;
+                        display: block;
+                        padding: 10px 10px;
+                        letter-spacing: 0.25px;
+                        white-space: nowrap;
+                        &.active , &:hover{
+                            background:#E60000;
+                            text-decoration: none;
+                        }
+                       
+                    }
+                }
+                 
+            }
+        }
+
+
+    }
 }
 
 .search-btn {
@@ -124,7 +171,8 @@ header {
     background: #7776BC;
     border: none;
     box-shadow: none;
-cursor: pointer;
+    cursor: pointer;
+
     svg {
         fill: #fff;
         display: block;
@@ -132,10 +180,11 @@ cursor: pointer;
         height: 100%;
         transition: 0.3s;
     }
+
     &:hover {
         svg {
             transform: scale(1.2);
-           
+
         }
     }
 }
