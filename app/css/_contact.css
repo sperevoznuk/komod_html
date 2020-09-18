@@ -1,0 +1,42 @@
+
+/* contact */
+.address-block {
+    position: relative;
+    padding-left: 35px;
+    margin: 10px 0;
+}
+.address-block:before{
+    content: '';
+    background: url(../img/sprite.svg#point) center no-repeat;
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    left: 0;
+    top: 0;
+    display: block;
+}
+
+.contact-gallery {}
+.contact-gallery .one{
+    display: flex;
+}
+.contact-gallery .left{
+    width: 60%;
+    height: 100%;
+}
+.contact-gallery .left img {
+    display:block;
+    width:100%;
+}
+.contact-gallery .right{
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.contact-gallery .right .img{
+    padding: 0 15px 15px 15px;
+    display: block;
+    width: 50%;
+}
+.contact-gallery .right img{}
+
