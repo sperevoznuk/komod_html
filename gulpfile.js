@@ -68,7 +68,7 @@ gulp.task('sass', function () {
 gulp.task('server', () => {
     browserSync.init({
         server: {
-            baseDir: './'//path.build.html
+            baseDir: path.build.html
         }
     });
 })
@@ -85,4 +85,4 @@ gulp.task('watch', (done) => {
 
 
 
-gulp.task('default', gulp.series('html', 'image:img', 'sass', gulp.parallel('watch', 'server')));
+gulp.task('default', gulp.series('html', 'image:img', 'sass','image:svg', gulp.parallel('watch', 'server')));
