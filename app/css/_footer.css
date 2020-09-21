@@ -1,7 +1,7 @@
 
 footer {
     background: #F5F5F9;
-    padding: 30px 0;
+    padding: 30px 0 0;
     font-size: 12px;
     color: #2F2C35;
     letter-spacing: 0.4px;
@@ -16,7 +16,7 @@ footer {
   }
   
   footer .row [class^="col-"] {
-    padding: 0 5px;
+    padding: 0 10px;
   }
    footer .row [class^="col-"].right-col  {
     padding-left:50px;
@@ -24,9 +24,8 @@ footer {
   
   footer .footer-title {
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     letter-spacing: 0.75px;
-    text-transform: uppercase;
     margin-bottom: 7px;
   }
   
@@ -85,7 +84,7 @@ footer {
     max-width: 200px;
   }
   
-  .bottom {
+  footer .bottom {
     background: #2F2C35;
     color: #fff;
     padding: 40px 0;
@@ -94,11 +93,41 @@ footer {
     letter-spacing: 0.4px;
   }
   
-  .bottom .copy-box {
+ footer .bottom .copy-box {
     margin-bottom: 30px;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
   }
- 
+ @media  (max-width: 960px){
+    footer{
+        /* display:none; */
+    }
+     footer .row [class^="col-"].right-col {
+       padding: 0 10px;
+       text-align: center;
+     }
+     .footer-benefis .item {
+       width:50%;
+       max-width: 50%;
+       margin-bottom: 10px;
+     }
+     .footer-benefis {
+       background:#fff     }
+
+       footer .row .col-contact {
+         text-align:center;
+         margin: 10px 0;
+       }
+footer .bottom .copy-box {
+  display: block;
+  margin-bottom: 10px;
+}
+   footer  .bottom .copy-box .col  {
+      margin-bottom:5px;
+    }
+   footer  .bottom {
+      padding: 20px 0;
+    }
+}

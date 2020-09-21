@@ -1,7 +1,7 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-6">
+            <div class="col-6 col-sm-12">
                 <div class="footer-title">Каталог</div>
                 <ul>
                     <li><a href="#">Мягкая мебель</a></li>
@@ -13,7 +13,7 @@
 
                 </ul>
             </div>
-            <div class="col-6">
+            <div class="col-6 col-sm-12">
                 <div class="footer-title">Информация</div>
                 <ul>
                     <li><a href="#">Доставка и оплата</a></li>
@@ -24,14 +24,14 @@
                     <li><a href="#">Гарантия Лучшей Цены</a></li>
                 </ul>
             </div>
-            <div class="col-5">
+            <div class="col-5 col-sm-24 col-contact">
                 <div class="footer-title">Контакты</div>
                 <p><a href="tel:78129801875">+7 (812) 980-18-75</a></p>
                 <p>Ежедневно с 10.00 до 22.00</p>
                 <p>Прием заказов онлайн круглосуточно</p>
                 <p><a href="mailto:zakaz@komod78.ru">zakaz@komod78.ru</a></p>
             </div>
-            <div class="col-7 right-col">
+            <div class="col-7 col-sm-24 right-col">
                 <div class="footer-title">Написать письмо директору</div>
                 <a href="#" class="button transparent">Заказать обратный звонок</a>
                 <div class="cards">
@@ -73,13 +73,13 @@
                 <div class="col">Сегодня в продаже: 7258 ед. товаров</div>
             </div>
             <div class="row">
-                <div class="col-12">
-                    Информация на данном интернет-сайте носит исключительно ознакомительный характер и ни при каких
-                    условиях не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса РФ.
+                <div class="col-12 col-sm-24">
+                    <p>Информация на данном интернет-сайте носит исключительно ознакомительный характер и ни при каких
+                        условиях не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса РФ.</p>
                 </div>
-                <div class="col-12">
-                    Окончательная цена, условия и сроки доставки, а также комплектация и другие характеристики товаров -
-                    уточняются нашими менеджерами.
+                <div class="col-12 col-sm-24">
+                   <p>Окончательная цена, условия и сроки доставки, а также комплектация и другие характеристики товаров -
+                    уточняются нашими менеджерами.</p>
                 </div>
             </div>
         </div>
@@ -94,8 +94,90 @@
     </div>
 </div>
 
+
+<link rel="stylesheet" href="js/pswp/photoswipe.css">
+
+<link rel="stylesheet" href="js/pswp/default-skin/default-skin.css">
+<script src="js/pswp/photoswipe.min.js"></script>
+<script src="js/pswp/photoswipe-ui-default.min.js"></script>
+<script src="js/pswp/init.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
 <script src="js/easybox/easybox.js"></script>
 <link rel="stylesheet" href="js/easybox/easybox.css">
+
+<script src="js/slick/slick.js"></script>
+<link rel="stylesheet" href="js/slick/slick.css">
+<link rel="stylesheet" href="js/slick/slick-theme.css">
 
 <script src="js/main.js"></script>
 <link

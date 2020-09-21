@@ -8,7 +8,7 @@ var path = {
         imgjpeg: 'app/img/*.jpg',
         imgpng: 'app/img/*.png',
         imgSVG: 'app/img/svg/*.svg',
-        js: 'app/js/**/*.js',
+        js: 'app/js/**/*.*',
     },
     build: {
         html: 'build/',
