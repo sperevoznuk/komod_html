@@ -19,7 +19,7 @@ footer {
     padding: 0 5px;
   }
    footer .row [class^="col-"].right-col  {
-    /* padding-left:50px; */
+    padding-left:50px;
   }
   
   footer .footer-title {
@@ -70,7 +70,7 @@ footer {
     line-height: 1.2;
     border-top: 1px solid #D7D7D7;
     padding: 20px 0px;
-    margin: 30px 0 0;
+    margin: 20px 0 0;
   }
   
   .footer-benefis .container {
