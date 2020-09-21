@@ -111,7 +111,7 @@ gulp.task('server', () => {
 
 gulp.task('watch', (done) => {
     gulp.watch(path.watch.css, gulp.series('css'));
-    gulp.watch(path.watch.js, gulp.series('js'));
+    gulp.watch(path.watch.js, gulp.series('js')).on('change', browserSync.reload);
     gulp.watch(path.watch.html, gulp.series('html')).on('change', browserSync.reload);
     gulp.watch(path.watch.imgSVG, gulp.series('image:svg')).on('change', browserSync.reload);
     gulp.watch(path.watch.img, gulp.series('image:img')).on('change', browserSync.reload);
