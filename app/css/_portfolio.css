@@ -1,0 +1,94 @@
+.works {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -7px;
+}
+
+.works .big {
+    width: 33.33%;
+    /* padding: 7px; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.works .name {
+    position: absolute;
+    left: 7px;
+    right: 7px;
+    bottom: 7px;
+    top: 7px;
+    background: rgba(47, 0, 79, 0.75);
+    display: flex;
+    opacity: 0;
+    z-index: -2;
+    color: #fff;
+    transition: 0.3s;
+    pointer-events: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    line-height: 1.2;
+}
+
+.works .small-image .name {
+    font-size: 18px;
+}
+
+.works .small-image .name .sub-text {
+    font-size: 14px;
+}
+
+.works img:hover+.name {
+    z-index: 2;
+    opacity: 1;
+}
+
+.works .name .text {
+    margin-bottom: 10px;
+}
+
+.works .name .sub-text {
+    font-size: 16px;
+}
+
+.works .small-image {
+    display: block;
+    padding: 7px;
+    width: 50%;
+    position: relative
+}
+
+.works .small-image img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.works .big-image {
+    padding: 7px;
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.works .big-image img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media (max-width:960px) {
+    .works .big {
+        width:50%;
+    }
+    .works .big {
+        width:100%;
+    }
+    .works .name {
+        display:none
+    }
+}

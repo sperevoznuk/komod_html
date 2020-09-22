@@ -1,0 +1,20 @@
+.cart {}
+.cart .cart-row {}
+.cart .image {}
+.cart .image img{}
+.cart .total {}
+.cart .spiner {}
+.cart .remove {}
+.cart .remove svg{}
+ 
+.spiner {}
+.spiner button{}
+.spiner button.plus{}
+.spiner [type=text]{}
+
+.totals {
+    background: #F5F5F9;
+}
+.totals .item {}
+.totals .name{}
+.totals .text{}

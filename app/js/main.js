@@ -23,7 +23,7 @@ $(function () {
     });
 
 
-    $('.photos').slick({
+    $('.contact-carousel').slick({
         rows: 2,
         slidesToShow: 2,
         slidesToScroll: 2,
@@ -46,4 +46,27 @@ $(function () {
         ]
 
     });
+    $('#map-carousel').slick({
+        rows: 1,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 960,
+                settings: {
+                    rows: 1,
+                    dots: true,
+                }
+            },
+            
+        ]
+
+    });
+
+    $('.addresses .easy-close').click( function(){
+        $(this).parent().addClass('hidden')
+        console.log('sdfsdf')
+    })
 })

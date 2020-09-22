@@ -1,13 +1,10 @@
 'use strict'
 
 var easybox = {
-  
     default: {
         content: '',
         href: '',
-
     },
-
     open: function (data) {
         if (typeof (data) == 'string') {
             data = {
@@ -52,7 +49,6 @@ var easybox = {
         console.log(obj.target.parentNode.parentNode);
         obj.target.parentNode.parentNode.remove();
     }
-
 }
 
 // easybox.open({

@@ -1,0 +1,89 @@
+.pagination {
+    margin: 40px;
+    font-size: 16px;
+}
+
+.pagination .links {
+    text-align: center;
+    line-height: 36px;
+    font-size: 0;
+}
+
+.pagination .prev,
+.pagination .next {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    position: relative;
+    color: #7776BC;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.pagination .next:before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: -4px;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    border-right: 1px solid currentColor;
+    border-top: 1px solid currentColor;
+    transform: rotate(45deg);
+    margin: auto;
+
+}
+
+.pagination .prev:before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 0px;
+    right: -4px;
+    bottom: 0;
+    top: 0;
+    border-left: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+    transform: rotate(45deg);
+    margin: auto;
+}
+
+.pagination .prev:hover,
+.pagination .next:hover {
+    background: #7776BC;
+    color: #fff;
+}
+
+.pagination .next {}
+
+.pagination .page {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 6px;
+    font-size: 16px;
+}
+
+.pagination .current {
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 6px;
+}
+
+.pagination .dots {
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 6px;
+}
+
+@media (max-width:960px) {
+    .pagination {
+        margin: 15px 0 0;
+    }
+}

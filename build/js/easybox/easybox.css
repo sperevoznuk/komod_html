@@ -40,7 +40,7 @@
     width: 100%;
     height: 1px;
     margin: auto;
-    background-color: red;
+    background-color: #000000;
         transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
@@ -56,7 +56,7 @@
     width: 100%;
     height: 1px;
     margin: auto;
-    background-color: red;
+    background-color: #000000;
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);

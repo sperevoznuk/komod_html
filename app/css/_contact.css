@@ -8,7 +8,7 @@
 }
 .address-block:before{
     content: '';
-    background: url(../img/sprite.svg#point) -4px -3px no-repeat;
+    background: url(../img/sprite.svg#point) -13px -3px no-repeat;
     background-size: cover;
     position: absolute;
     width: 29px;
@@ -42,7 +42,7 @@
 .contact-gallery .right{
     width: 34%;
     /* display: flex; */
-    /* flex-wrap: wrap; */
+    font-size: 0;
 }
 .contact-gallery .right .img{
     padding: 0 0px 15px 15px;
@@ -53,6 +53,7 @@
     object-fit: cover;
     width: 100%;
     height: 100%;
+    display: block;
 }
 
 @media  (max-width: 960px){

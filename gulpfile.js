@@ -9,6 +9,7 @@ var path = {
         imgpng: 'app/img/*.png',
         imgSVG: 'app/img/svg/*.svg',
         js: 'app/js/**/*.*',
+        fonts: 'app/fonts/**/*.*',
     },
     build: {
         html: 'build/',
@@ -16,6 +17,7 @@ var path = {
         css: 'build/css/',
         svgSprite: 'build/img/sprite.svg',
         js: 'build/js/',
+        fonts: 'build/fonts/',
     },
     watch: {
         css: 'app/css/**/*.css',
@@ -23,6 +25,7 @@ var path = {
         imgSVG: 'app/img/svg/*.svg',
         img: 'app/img/*',
         js: 'app/js/**/*.js',
+        fonts: 'app/fonts/**/*.*',
     }
 };
 
@@ -30,11 +33,12 @@ var gulp = require('gulp');
 var rigger = require('gulp-rigger'),
     svgSprite = require('gulp-svg-sprite'),
     browserSync = require('browser-sync').create(),
-    sass = require('gulp-sass'),
-    sourcemaps = require('gulp-sourcemaps'),
+    // sass = require('gulp-sass'),
+    // sourcemaps = require('gulp-sourcemaps'),
     importCss = require('gulp-import-css'),
     cleanCss = require('gulp-clean-css'),
-    plumber = require('gulp-plumber');
+    plumber = require('gulp-plumber'),
+    autoprefixer = require('gulp-autoprefixer');
 
 
 gulp.task('html', (done) => {
@@ -42,6 +46,11 @@ gulp.task('html', (done) => {
         .pipe(rigger())
         .pipe(gulp.dest(path.build.html))
         .pipe(gulp.dest(path.src.app));
+    done();
+})
+gulp.task('fonts', (done) => {
+    gulp.src(path.src.fonts)
+        .pipe(gulp.dest(path.build.fonts));
     done();
 })
 
@@ -71,23 +80,17 @@ gulp.task('image:img', (done) => {
         .pipe(gulp.dest(path.build.img));
     done();
 })
-
-// gulp.task('sass', function () {
-//     return gulp.src(path.src.css)
-//         .pipe(sourcemaps.init())
-//         .pipe(sass().on('error', sass.logError))
-//         .pipe(sourcemaps.write())
-//         .pipe(gulp.dest(path.build.css))
-//         .pipe(browserSync.stream());
-// });
-
+ 
 
 gulp.task('css', (done) => {
 
     gulp.src(path.src.css)
         .pipe(plumber())
+     
         .pipe(importCss())
+       
         .pipe(cleanCss({ level: { 2: { specialComments: 0 } }, format: 'keep-breaks' }))
+        .pipe(autoprefixer())
         .pipe(gulp.dest(path.build.css));
 
     done();
@@ -111,6 +114,7 @@ gulp.task('server', () => {
 
 gulp.task('watch', (done) => {
     gulp.watch(path.watch.css, gulp.series('css'));
+    gulp.watch(path.watch.fonts, gulp.series('fonts')).on('change', browserSync.reload);
     gulp.watch(path.watch.js, gulp.series('js')).on('change', browserSync.reload);
     gulp.watch(path.watch.html, gulp.series('html')).on('change', browserSync.reload);
     gulp.watch(path.watch.imgSVG, gulp.series('image:svg')).on('change', browserSync.reload);
@@ -120,4 +124,4 @@ gulp.task('watch', (done) => {
 
 
 
-gulp.task('default', gulp.series('html', 'css','js', 'image:img', 'image:svg', gulp.parallel('watch', 'server')));
+gulp.task('default', gulp.series('html','fonts', 'css','js', 'image:img', 'image:svg', gulp.parallel('watch', 'server')));
