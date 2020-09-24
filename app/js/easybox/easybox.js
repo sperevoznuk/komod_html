@@ -4,6 +4,7 @@ var easybox = {
     class: {
         overlay: 'easy-overlay',
         blocked: 'easy-blocked',
+        placeholderPrefix: 'easy-placeholder-',
     },
     default: {
         content: '',
@@ -11,20 +12,27 @@ var easybox = {
     },
     open: function (data) {
         if (typeof (data) == 'string') {
+            var htmlInnerEl = document.createElement('div');
+            htmlInnerEl.innerHTML = data;
             data = {
-                content: data,
+                content: htmlInnerEl,
             }
         }
 
         data = Object.assign(this.default, data);
 
         if (data.href.substr(0, 1) == '#') {
-            var element = document.getElementById(data.href.substr(1))
-            if (element == null) {
+            var elementId = data.href.substr(1);
+            var element = document.getElementById(elementId)
+            if (element == null || document.querySelectorAll('.' + this.class.placeholderPrefix + elementId).length) {
                 console.log(data.href + ' not found');
                 return false;
             }
-            data.content = element.outerHTML;
+
+            var plaseholder = document.createElement('div')
+            plaseholder.classList.add(this.class.placeholderPrefix + elementId)
+            element.after(plaseholder);
+            data.content = element;
         }
 
         var box = document.createElement('div'),
@@ -36,7 +44,9 @@ var easybox = {
         close.className = 'easy-close';
         box.className = 'easy-overlay';
         inner.className = 'easy-inner';
-        inner.innerHTML = data.content;
+
+
+        inner.appendChild(data.content);
 
 
         content.appendChild(inner);
@@ -47,18 +57,31 @@ var easybox = {
         document.body.appendChild(box);
 
         close.addEventListener('click', (event) => {
-            event.target.parentNode.parentNode.remove();
-            this.unBlockPage();
+            this._close(event.target.parentNode.parentNode);
+
         });
         box.addEventListener('click', (event) => {
             if (event.target.className == this.class.overlay) {
-                event.target.remove();
+                this._close(event.target);
             }
-            this.unBlockPage();
         });
         this.blockPage();
     },
-    close: function (obj) {
+    _close: function (target) {
+        var element = target.querySelector('.easy-inner >*');
+        var placeholder = document.querySelector('.' + this.class.placeholderPrefix + element.attributes['id'].value);
+
+        placeholder.after(element); 
+        placeholder.remove();
+        target.remove();
+        this.unBlockPage();
+    },
+    close: function () {
+        var popups = document.getElementsByClassName(this.class.overlay);
+        for (let index = 0; index < popups.length; index++) {
+            this._close(popups[index]);
+        }
+
 
     },
     blockPage: function () {
@@ -84,5 +107,7 @@ for (let index = 0; index < elements.length; index++) {
 // easybox.open({
 //     href: '#call'
 // })
+
+// easybox.close();
 
 // easybox.open('text')

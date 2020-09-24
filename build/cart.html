@@ -200,7 +200,7 @@
                                  <div class="old-price rouble">7 490</div>
                              </div>
                              <div class="controls">
-                                 <a href="#fast-order" class="fast-link">Купить в один клик</a>
+                                 <div class="fast-link" onclick="fastOrder('Диван-книжка съемный чехол Кристина', 1)">Купить в один клик</div>
                                  <div class="buy">
                                      <svg>
                                          <use xlink:href="img/sprite.svg#cart"> </use>
@@ -225,7 +225,7 @@
                              <div class="old-price rouble">7 490</div>
                          </div>
                          <div class="controls">
-                             <a href="#fast-order" class="fast-link">Купить в один клик</a>
+                             <div class="fast-link" onclick="fastOrder('Диван-книжка съемный чехол Кристина', 1)">Купить в один клик</div>
                              <div class="buy">
                                  <svg>
                                      <use xlink:href="img/sprite.svg#cart"> </use>
@@ -248,7 +248,7 @@
                                  <div class="old-price rouble">7 490</div>
                              </div>
                              <div class="controls">
-                                 <a href="#fast-order" class="fast-link">Купить в один клик</a>
+                                 <div class="fast-link" onclick="fastOrder('Диван-книжка съемный чехол Кристина', 1)">Купить в один клик</div>
                                  <div class="buy">
                                      <svg>
                                          <use xlink:href="img/sprite.svg#cart"> </use>
@@ -273,7 +273,7 @@
                              <div class="old-price rouble">7 490</div>
                          </div>
                          <div class="controls">
-                             <a href="#fast-order" class="fast-link">Купить в один клик</a>
+                             <div class="fast-link" onclick="fastOrder('Диван-книжка съемный чехол Кристина', 1)">Купить в один клик</div>
                              <div class="buy">
                                  <svg>
                                      <use xlink:href="img/sprite.svg#cart"> </use>
@@ -432,6 +432,38 @@
 
         </form>
     </div>
+    <div class="pop_up_box" id="fast-order">
+        <div class="title_popup">
+           Авторизация
+        </div>
+
+        <div class="sub_title_popup" id="product_name"></div>
+        <form action="/">
+            <input type="hidden" name="action" value="fast-oder">
+            <input type="hidden" name="product_name" value="">
+            <input type="hidden" name="product_id" value="">
+            <div class="input_row">
+                <input name="name" type="text" placeholder="Имя">
+            </div>
+            <div class="input_row">
+                <input name="phone" type="text" placeholder="Телефон">
+            </div>
+            <div class="input_row">
+                <input name="email" type="text" placeholder="Email">
+            </div>
+             
+
+            <div class="input_row">
+                <div class="agree">
+                    Нажимая на кнопку "Отправить", Вы соглашаетесь с правилами  <a href="#"> обработки персональных данных.</a>
+                </div>
+            </div>
+            <div class="input_row">
+                <button class="button">Отправить</button>
+            </div>
+
+        </form>
+    </div>
 </div>
 
 
@@ -511,7 +543,7 @@
 </div>
 
 
-
+<link rel="stylesheet" href="fonts/rouble/rub_ccs.css">
 <script src="js/easybox/easybox.js"></script>
 <link rel="stylesheet" href="js/easybox/easybox.css">
 
@@ -519,7 +551,18 @@
 <link rel="stylesheet" href="js/slick/slick.css">
 <link rel="stylesheet" href="js/slick/slick-theme.css">
 
-<link rel="stylesheet" href="fonts/rouble/rub_ccs.css">
+
+
+
+<script src="js/select2/select2.min.js"></script>
+<link rel="stylesheet" href="js/select2/select2.min.css">
+
+<script src="js/ui/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="js/ui/jquery-ui.min.css">
+
+<script src="js/jquery.maskedinput.js"></script>
+ 
+
 
 <script src="js/main.js"></script>
 <link
