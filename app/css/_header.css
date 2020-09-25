@@ -243,6 +243,7 @@ header .menu nav>ul>li>ul {
     padding: 0;
     background: #2F2C35;
     width: 208px;
+    z-index: 2;
 }
 
 header .menu nav>ul>li>ul a {
@@ -273,6 +274,10 @@ header .menu nav ul>li>a.active, header .menu nav ul>li>a:hover {
     cursor: pointer;
     text-align: center;
     color: #fff;
+    transition: 0.3s;
+}
+.search-btn:hover {
+    background: #E60000;
 }
 
 .search-btn svg {
@@ -490,8 +495,13 @@ header .menu nav ul>li>a.active, header .menu nav ul>li>a:hover {
         display: block;
     }
 
+header .menu nav>ul>li>ul {
+    position:relative;
+    width: 100%;
+}
     header .menu nav>ul>li>a {
         padding: 4px 5px;
+        text-align: left;
     }
 
    header .top {
