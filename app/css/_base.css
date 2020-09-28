@@ -467,6 +467,8 @@ strong {
   background-color: #E60000;
   color: #fff;
   border-color: #E60000;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .button.red:hover {

@@ -1,0 +1,221 @@
+.product_info {
+    display: flex;
+    position: relative;
+    margin-bottom: 30px;
+}
+.product_info .image-col{
+    display: block;
+    position: relative;
+    width: calc(100% - 340px);
+}
+.product_info .images{}
+.product_info .images .image {}
+.product_info .images img {}
+.product_info .thumbs{
+    display: flex;
+}
+.product_info .thumbs .image {
+    border: 1px solid #E6E7E8;
+    padding: 5px;
+    margin: 0 5px 0 0;
+}
+.product_info .thumbs .image img{
+    display: block;
+    width: 100%;
+}
+
+.descr-col {
+    width: 330px;
+    padding-left: 30px;
+}
+.descr-col .grey-pannel {
+    background: #F5F5F9;
+    padding: 10px;
+    margin-bottom: 25px;
+}
+.descr-col .grey-pannel a {text-decoration:underline;color: #2F004F;}
+.descr-col .grey-pannel a:hover {text-decoration:none;}
+.descr-col .grey-pannel.arr-right {
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 15px 30px 15px 15px;
+}
+.descr-col .grey-pannel.arr-right:after {content:'';background: url(../img/sprite.svg#arrow-right) center no-repeat;background-size: cover;display: block;width: 25px;height: 25px;position: absolute;right: 10px;bottom: 0;top: 0;margin: auto;} 
+.descr-col .price-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    line-height: 1;
+}
+.descr-col .price-box .regular{
+    font-size: 34px;
+    font-weight: bold;
+    line-height: 1;
+    margin-right: auto;
+}
+.descr-col .price-box .old-price{
+    font-size: 16px;
+    color: #828282;
+    text-decoration-line: line-through;
+}
+.descr-col .price-box .percent{
+    font-size: 14px;
+line-height: 20px;
+letter-spacing: 0.25px;
+color: #E60000;
+}
+ 
+.buy-box {}
+.buy-box .credit{
+    text-align: center;
+    letter-spacing: 0.25px;
+    text-decoration-line: underline;
+    color: #2F004F;
+    margin-bottom: 25px;
+}
+.buy-box .button{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    line-height: 44px;
+}
+
+.small-permissions {}
+.small-permissions .item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.small-permissions .item svg{}
+.small-permissions .icon{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+.small-permissions .name{}
+ body .slick-prev, body .slick-next  {
+     /* height: AUTO; */
+     right: 0;
+     width: 50px;
+     height: 50px;
+     z-index: 2;
+ }
+body .slick-next:before, body .slick-prev:before  
+{
+    content: '';
+    background: url(../img/sprite.svg#arrow-right) center no-repeat;
+    background-size: cover;
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    opacity: 1;
+}
+body .slick-prev {
+    left:0;
+}
+body .slick-prev:before   {
+    transform:rotate(-180deg);
+}
+
+.review-list {
+
+}
+.review-list .name {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 13px;
+}
+.review-list .stars {
+    margin-left:20px
+}
+.review-list .text {
+    line-height: 1.6;
+    font-size: 16px;
+    font-weight: 300;
+}
+#review h2 {
+    font-size: 25px;
+    font-weight: 300;
+    margin-bottom: 34px;
+}
+#review .content {
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+}
+.review{
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+}
+
+.product-tabs {
+    margin: 0 0 40px;
+}
+.product-tabs .btns {
+    border-bottom: 2px solid #F5F5F9;
+    display: table;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.product-tabs .btns a{
+    color: #000;
+ 
+    display: block;
+    padding: 5px 10px;
+    text-align: CENTER;
+}
+.product-tabs .btns li{
+    display: table-cell;
+    width: 25%;
+}
+.product-tabs .btns li a.active, .product-tabs .btns li a:hover{
+    color: #E60000;
+    text-decoration:none;
+}
+.product-tabs .tab-content{
+    display: none;
+}
+.product-tabs .tab-content.active {
+    display:block;
+}
+
+.attributes {
+    max-width: 600px;
+    padding: 20px 0;
+}
+.attributes .attribute{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 5px;
+}
+.attributes .attribute:after {
+    content:'';
+    display:block;
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    border-bottom: 1px dashed #828282;
+    z-index: 0;
+}
+.attributes .name {
+    color: #828282;
+    background: #fff;
+    position: relative;
+    z-index: 2;
+    padding-right: 5p;
+}
+.attributes .text{
+    background: #fff;
+    position: relative;
+    z-index: 2;
+    padding-left: 5px;
+}

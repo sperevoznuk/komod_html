@@ -64,6 +64,13 @@ $(function () {
         ]
 
     });
+    $('#product-images').slick({
+        rows: 1,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+    });
 
     $('.addresses .easy-close').click(function () {
         $(this).parent().addClass('hidden')
@@ -112,10 +119,16 @@ $(function () {
         $('#filterpro_box').toggleClass('open');
         $('body').toggleClass('easy-blocked')
     })
+    $('.product-tabs .btns a').click(function () {
+    
+        $(this).parents('.product-tabs').find('.active').removeClass('active');
+        $(this).addClass('active');
+        $(this).parents('.product-tabs').find($(this).attr('href')).addClass('active')
+    return false;
+    })
+    $('.product-tabs .btns a:first').trigger('click')
 
 })
-
-
 
 /// for filter, nead remove
 if ($("#slider-range").length) {
@@ -195,3 +208,4 @@ function fastOrder(product_name, product_id) {
     })
 
 }
+

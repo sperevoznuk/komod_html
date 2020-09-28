@@ -76,7 +76,7 @@ b,strong{font-weight:800}
 .button:hover{text-decoration:none;color:#5f0a87;background-color:#fff}
 .button.transparent{background-color:transparent;color:#7776bc;border-color:#7776bc}
 .button.transparent:hover{background:#7776bc;color:#fff}
-.button.red{background-color:#e60000;color:#fff;border-color:#e60000}
+.button.red{background-color:#e60000;color:#fff;border-color:#e60000;padding-left:30px;padding-right:30px}
 .button.red:hover{background:#fff;color:#e60000;border-radius:9px}
 .hidden{display:none!important}
 body .slick-dots li button{background:#7776bc;width:20px}
@@ -535,3 +535,43 @@ body .select2-container{min-width:60px}
 .product .price{margin-right:2px}
 .category-images .one{width:50%}
 }
+.product_info{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;position:relative;margin-bottom:30px}
+.product_info .image-col{display:block;position:relative;width:calc(100% - 340px)}
+.product_info .thumbs{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
+.product_info .thumbs .image{border:1px solid #e6e7e8;padding:5px;margin:0 5px 0 0}
+.product_info .thumbs .image img{display:block;width:100%}
+.descr-col{width:330px;padding-left:30px}
+.descr-col .grey-pannel{background:#f5f5f9;padding:10px;margin-bottom:25px}
+.descr-col .grey-pannel a{text-decoration:underline;color:#2f004f}
+.descr-col .grey-pannel a:hover{text-decoration:none}
+.descr-col .grey-pannel.arr-right{min-height:100px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;position:relative;padding:15px 30px 15px 15px}
+.descr-col .grey-pannel.arr-right:after{content:'';background:url(../img/sprite.svg#arrow-right) center/cover no-repeat;display:block;width:25px;height:25px;position:absolute;right:10px;bottom:0;top:0;margin:auto}
+.descr-col .price-box{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end;-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end;line-height:1}
+.descr-col .price-box .regular{font-size:34px;font-weight:700;line-height:1;margin-right:auto}
+.descr-col .price-box .old-price{font-size:16px;color:#828282;-webkit-text-decoration-line:line-through;text-decoration-line:line-through}
+.descr-col .price-box .percent{font-size:14px;line-height:20px;letter-spacing:.25px;color:#e60000}
+.buy-box .credit{text-align:center;letter-spacing:.25px;-webkit-text-decoration-line:underline;text-decoration-line:underline;color:#2f004f;margin-bottom:25px}
+.buy-box .button{display:block;width:100%;margin-bottom:10px;line-height:44px}
+.small-permissions .item{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;margin-bottom:15px}
+.small-permissions .icon{width:30px;height:30px;margin-right:5px}
+body .slick-next,body .slick-prev{right:0;width:50px;height:50px;z-index:2}
+body .slick-next:before,body .slick-prev:before{content:'';background:url(../img/sprite.svg#arrow-right) center/cover no-repeat;display:block;width:25px;height:25px;position:absolute;right:10px;bottom:0;top:0;margin:auto;opacity:1}
+body .slick-prev{left:0}
+body .slick-prev:before{-webkit-transform:rotate(-180deg);-ms-transform:rotate(-180deg);transform:rotate(-180deg)}
+.review-list .name{font-weight:600;font-size:18px;margin-bottom:13px}
+.review-list .stars{margin-left:20px}
+.review-list .text{line-height:1.6;font-size:16px;font-weight:300}
+#review h2{font-size:25px;font-weight:300;margin-bottom:34px}
+#review .content,.review{margin-bottom:25px;padding-bottom:25px}
+.product-tabs{margin:0 0 40px}
+.product-tabs .btns{border-bottom:2px solid #f5f5f9;display:table;width:100%;margin-bottom:40px}
+.product-tabs .btns a{color:#000;display:block;padding:5px 10px;text-align:CENTER}
+.product-tabs .btns li{display:table-cell;width:25%}
+.product-tabs .btns li a.active,.product-tabs .btns li a:hover{color:#e60000;text-decoration:none}
+.product-tabs .tab-content{display:none}
+.product-tabs .tab-content.active{display:block}
+.attributes{max-width:600px;padding:20px 0}
+.attributes .attribute{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;position:relative;margin-bottom:5px}
+.attributes .attribute:after{content:'';display:block;position:absolute;bottom:2px;left:0;right:0;border-bottom:1px dashed #828282;z-index:0}
+.attributes .name{color:#828282;background:#fff;position:relative;z-index:2;padding-right:5p}
+.attributes .text{background:#fff;position:relative;z-index:2;padding-left:5px}
