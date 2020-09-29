@@ -482,11 +482,20 @@ strong {
   display: none !important;
 }
 
-.slick-dots li {}
+body  .slick-dots li {
+  width:auto;
+  height:auto;
+}
 
 body .slick-dots li button {
   background: #7776BC;
   width: 20px;
+}
+
+
+
+body .slick-dots li {
+ margin: 0 3px;
 }
 
 body .slick-dots li button:before {

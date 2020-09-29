@@ -138,7 +138,7 @@
 }
 .map-full .inner {display: flex;flex-wrap: wrap;}
 @media (min-width:960px) {
-    .map-full .slide  .big{
+    .slick-slide .slide .big{
     width: 50%;
 }
 }
