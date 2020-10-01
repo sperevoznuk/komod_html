@@ -7,6 +7,7 @@ var path = {
         img: 'app/img/',
         imgjpeg: 'app/img/*.jpg',
         imgpng: 'app/img/*.png',
+        imgsvg: 'app/img/*.svg',
         imgSVG: 'app/img/svg/*.svg',
         js: 'app/js/**/*.*',
         fonts: 'app/fonts/**/*.*',
@@ -26,6 +27,13 @@ var path = {
         img: 'app/img/*',
         js: 'app/js/**/*.js',
         fonts: 'app/fonts/**/*.*',
+    },
+    deploy: {
+        src: 'build/**',
+        dest: 'komod78',
+        host: 'sperevgs.beget.tech',
+        user: 'sperevgs_html',
+        password: 'Ul5X&CGM',
     }
 };
 
@@ -38,7 +46,9 @@ var rigger = require('gulp-rigger'),
     importCss = require('gulp-import-css'),
     cleanCss = require('gulp-clean-css'),
     plumber = require('gulp-plumber'),
-    autoprefixer = require('gulp-autoprefixer');
+    autoprefixer = require('gulp-autoprefixer'),
+    ftp = require('vinyl-ftp'),
+    clean = require('gulp-clean');
 
 
 gulp.task('html', (done) => {
@@ -78,17 +88,19 @@ gulp.task('image:img', (done) => {
         .pipe(gulp.dest(path.build.img));
     gulp.src(path.src.imgjpeg)
         .pipe(gulp.dest(path.build.img));
+    gulp.src(path.src.imgsvg)
+        .pipe(gulp.dest(path.build.img));
     done();
 })
- 
+
 
 gulp.task('css', (done) => {
 
     gulp.src(path.src.css)
         .pipe(plumber())
-     
+
         .pipe(importCss())
-       
+
         .pipe(cleanCss({ level: { 2: { specialComments: 0 } }, format: 'keep-breaks' }))
         .pipe(autoprefixer())
         .pipe(gulp.dest(path.build.css));
@@ -111,6 +123,15 @@ gulp.task('server', () => {
     });
 })
 
+gulp.task('build', gulp.series('html', 'fonts', 'css', 'js', 'image:img', 'image:svg'))
+
+gulp.task('clean', (done) => {
+    gulp.src(path.build.html, { read: false })
+        .pipe(clean());
+    done();
+})
+
+
 
 gulp.task('watch', (done) => {
     gulp.watch(path.watch.css, gulp.series('css'));
@@ -122,6 +143,20 @@ gulp.task('watch', (done) => {
     return;
 })
 
+gulp.task('deploy',  (done) => {
+    var conn = ftp.create({
+        host: path.deploy.host,
+        user: path.deploy.user,
+        password: path.deploy.password,
+        parallel: 10,
+        // log: gutil.log
+    });
+
+    return gulp.src([path.deploy.src], { buffer: false }).pipe(conn.dest(path.deploy.dest));
+    done();
+})
 
 
-gulp.task('default', gulp.series('html','fonts', 'css','js', 'image:img', 'image:svg', gulp.parallel('watch', 'server')));
+
+
+gulp.task('default', gulp.series('build', gulp.parallel('watch', 'server')));
